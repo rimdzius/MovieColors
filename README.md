@@ -1,10 +1,10 @@
 # MovieColors
 
 ## Question:
-Can you predict a movie's genre(s) based on the hues and saturation levels of the frames?
+Can you predict a movie's genre(s) based on the hues, brightness, and saturation levels of the frames?
 
 ## Description:
-When you think of a sterotypical movie of a given genre, certain themes may come to mind. A horror movie setting is probably dark and gloomy. A western is typically set in a desert/arid environment. Action movies are going to be filled with fast-moving fight scenes or explosions. Science Fiction movies often take place in space. From this, it seems like certain movies/genres may have similar themes: a horror movie may generally have darker colors (deeper saturation), and a western may have lighter and redder tones. If you open up each frame of a movie and record the average color (hue & saturation), can one take that information and predict the movie's genre(s)?
+When you think of a sterotypical movie of a given genre, certain themes may come to mind. A horror movie setting is probably dark and gloomy. A western is typically set in a desert/arid environment. Action movies are going to be filled with fast-moving fight scenes or explosions. Science Fiction movies often take place in space. From this, it seems like certain movies/genres may have similar themes: a horror movie may generally have darker colors, and a western may have lighter and redder tones. If you open up each frame of a movie and record the average color (hue, brightness & saturation), can one take that information and predict the movie's genre(s)?
 
 This is based on the idea of Charlie Clark's [The Colors of Motion](https://thecolorsofmotion.com/). However, I am using my own code and movie database, and not utilizing his work.
 
@@ -21,7 +21,7 @@ I will be utilizing my own extensive movie database that I have recently digitze
     - Sub-genre (2)
     - Runtime
 2. Collect and clean the data
-    - Open each movie file, open each frame and record the hue and saturation levels
+    - Open each movie file, open each frame and record the hue, brightness, and saturation levels
     - Store these levels with the database above.
     - The runtime / number of frames will need to be normalized across all movies in order to properly compare.
 3. Explore and analyze the data
@@ -38,3 +38,4 @@ I will be utilizing my own extensive movie database that I have recently digitze
 - Movie runtimes all vary and trying to compress the data into a normalized runtime may be difficult.
 - My database of movies is composed of qualities from 480p (SD) to 2160p (4k). The higher the quality, the more pixels, the more processing will be required.
 - Most movies are 24 frames per second (FPS). But some may be 30, 60 or even 120. Obviously the higher FPS, the more frames that will be required to process.
+- There are no advertisements or trailers to my recollection in any of these movies. However, there are pre-rolls included (i.e. 20th Century Fox opening). Considering these prerolls are generally less than a minute in total, I do not believe this should have much of an affect on the overall movie.
